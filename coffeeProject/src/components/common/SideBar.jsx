@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import {AnimatePresence, motion } from 'framer-motion'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 // import  icons
 import { IoHome,  IoClose } from "react-icons/io5";
 import { FaBoxOpen } from "react-icons/fa";
@@ -15,6 +15,7 @@ const SideBar = () => {
     const [sidebar, setSidebar] = useState(false);
     const [restlocal, setRestlocal] = useState(null);
     const [screenSmall, setScreen] = useState(window.innerWidth <= 425);
+    const location = useLocation();
 
     useEffect(() => {
         const savedSidebarState = localStorage.getItem('sidebarState');
@@ -48,17 +49,17 @@ const SideBar = () => {
 
 
     const sidebarVariants = [
-        { sideItem: 'Home', color: '#000',  icon: IoHome, href: '/' },
-        { sideItem: 'Products', color: '#ed0909', icon: FaBoxOpen  , href: '/products'}, 
-        { sideItem: 'About', color: '#2d2e2d', icon: FaCircleExclamation, href: '/about'},
-        { sideItem: 'Contact', color: '#05fc26', icon: MdLocalPhone, href: '/contact'},
+        { sideItem: 'Home',  icon: IoHome, href: '/' },
+        { sideItem: 'Products', icon: FaBoxOpen  , href: '/products'}, 
+        { sideItem: 'About',  icon: FaCircleExclamation, href: '/about'},
+        { sideItem: 'Contact', icon: MdLocalPhone, href: '/contact'},
     ];
   return (
     <motion.div
     className={`shadow-lg ${sidebar ? 'w-full sm:w-[10rem]' : 'w-full sm:w-[6rem]'}  p-4 flex flex-col sm:items-stretch items-center`}
     animate={window.innerWidth > 320 ? { width: sidebar ? '10rem' : '6rem' } : { width: sidebar ? '' : '100full', }}
     >
-        <motion.button className='cursor-pointer hidden sm:block'
+        <motion.button className='cursor-pointer hidden sm:block border-box w-[1.5rem]'
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 1 }}
         onClick={() => setSidebar(!sidebar, localStorage.setItem('sidebarState', JSON.stringify(!sidebar)))}>    
@@ -69,14 +70,12 @@ const SideBar = () => {
         <nav className='flex items-center justify-center sm:justify-normal'>
         <motion.div className='flex sm:flex-col flex-row sm:gap-4 gap-10 mt-5 sm:mt-10 item-center justify-center'>
             {sidebarVariants.map((item, index) => (
-                <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 1 }}>
-                <Link to={item.href} key={index} className='flex sm:flex-row flex-col items-center gap-3' onClick={screenSmall ? () => setSidebar(false) : undefined}>
-                <item.icon size={21} style={{color: item.color}} />
+                <motion.div>
+                <Link to={item.href} key={index} className={`flex sm:flex-row flex-col items-center gap-4 px-3 py-1 rounded-sm ${item.href === location.pathname ? "shadow-xl bg-[#0202024b]" : 'hover:bg-[#8a8a8a1c]'} `} onClick={screenSmall ? () => setSidebar(false) : undefined}>
+                <item.icon size={21} />
                 <AnimatePresence> 
                     {sidebar && <motion.span
-                    className='ml-4 whitespace-nowrap hidden sm:block'
+                    className='whitespace-nowrap hidden sm:block font-medium text-sm'
                     initial={{ opacity: 0, width: 0 }}
                     animate={{ opacity: 1, width: "auto" }}
                     exit={{ opacity: 0, width: 0 }}
