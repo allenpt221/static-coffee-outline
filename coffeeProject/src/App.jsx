@@ -6,7 +6,7 @@ import SideBar from './components/common/SideBar'
 const App = () => {
   return (
     <div 
-    className='flex flex-col sm:flex-row overflow-hidden'>
+    className='flex flex-col sm:flex-row overflow-hidden h-screen'>
       <SideBar /> 
       <div className="flex-grow overflow-y-auto h-[100%]">
         <Routes>

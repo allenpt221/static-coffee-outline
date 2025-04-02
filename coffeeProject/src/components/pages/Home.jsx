@@ -30,7 +30,7 @@ const Home = () => {
     animate={{ opacity: 1, y: 20 }}
     exit={{ opacity: 0, y: 0 }}
     transition={{ duration: 0.5 }} 
-    className='w-full h-[10000px] mt-5 overflow'>
+    className='w-full h-full mt-5 overflow'>
       <div className='flex justify-center gap-2 flex-col items-center'>
         <h1 className='font-semibold'>{coffeeText.coffeheader}</h1>
         <p className='sm:w-[35rem] lg:w-[60rem] w-[19rem] text-center'>{coffeeText.coffeePara}</p>
