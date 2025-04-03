@@ -13,15 +13,25 @@ const Home = () => {
 
   const coffeeSection = [{
     title: 'Use Fresh, Quality Beans',
-    image: '/image/background-image.png',
+    image: '/image/QualityBeans.png',
     text: 'The foundation of great coffee is using high-quality, freshly roasted beans. Try to purchase beans that have been roasted within the last two weeks and grind them just before brewing. Freshness is key to getting the best flavors.',
-    buttonText: 'Quality Beans'
+    buttonText: 'Quality Beans',
+    href: 'https://www.amazon.com/s?k=coffee+beans&crid=3RTKQFWI1YXFF&sprefix=coffee+bean%2Caps%2C338&ref=nb_sb_noss_1',
+    altertext: 'error Image'
   }, {
-
+    title: 'Measure Your Coffee and Water',
+    image: '/image/MeasureCoffee.png',
+    text: 'The appropriate coffee-to-water ratio varies depending on your brewing method, but a good rule of thumb is about 1:15 (1 gram of coffee for every 15 grams of water). A kitchen scale can help you achieve the proper balance and avoid under- or over-extraction.',
+    buttonText: 'Measurement',
+    href: 'https://www.foodnetwork.com/recipes/articles/coffee-water-ratio',
+    altertext: 'error Image'
   },{
-    
+    title: 'Brew Time & Method',
+    image: '/image/BrewTime.png',
+    altertext: 'error Image'
   },{
-    
+    title: 'Water Quality and Temperature',
+    altertext: 'error Image'
   }]
   
   return (
@@ -47,13 +57,13 @@ const Home = () => {
           className='rounded-md shadow-lg p-2 text-center  bg-[#f5f5f5]' key={index}>
             <div className='flex flex-col gap-2 items-center justify-center'>
             <h1 className='font-semibold'>{item.title}</h1>
-            <img src={item.image} alt="" className=' md:w-full h-[10rem] sm:h-[8rem] lg:h-[10rem] rounded-md'/>
+            <img src={item.image} alt={item.altertext} className=' h-[10rem] sm:h-[8rem] lg:h-[11.5rem] md:w-[20rem] rounded-lg shadow-lg border border-[#3b3b3b59] text-left font-serif'/>
             <p className='text-xs px-2 md:w-[18rem] lg:w-[15rem] xl:w-[20rem] w-[16rem]'>{item.text}</p>
             </div>
             <motion.span className='float-right mr-5 mt-2'
-            whileHover={{ scale: 1.01 }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}>
-              <a href='https://www.amazon.com/s?k=coffee+beans&crid=3RTKQFWI1YXFF&sprefix=coffee+bean%2Caps%2C338&ref=nb_sb_noss_1' target='_blank' title='View?' 
+              <a href={item.href} target='_blank' title='View?' 
               className='text-xs border-2 border-[#2e2e2e33] py-[0.1rem] px-[0.5rem] font-medium '>
               {item.buttonText}
               </a>

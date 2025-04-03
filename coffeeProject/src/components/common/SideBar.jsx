@@ -57,7 +57,7 @@ const SideBar = () => {
   return (
     <motion.div
     className={`shadow-lg ${sidebar ? 'w-full sm:w-[10rem]' : 'w-full sm:w-[6rem]'}  p-4 flex flex-col sm:items-stretch items-center`}
-    animate={window.innerWidth > 320 ? { width: sidebar ? '10rem' : '6rem' } : { width: sidebar ? '' : '100full', }}
+    animate={window.innerWidth > 450 ? { width: sidebar ? '10rem' : '6rem' } : { width: sidebar ? '' : '100full', }}
     >
         <motion.button className='cursor-pointer hidden sm:block border-box w-[1.5rem]'
         whileHover={{ scale: 1.1 }}
