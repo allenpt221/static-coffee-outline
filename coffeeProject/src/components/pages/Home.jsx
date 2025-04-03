@@ -28,13 +28,14 @@ const Home = () => {
   },{
     title: 'Brew Time & Method',
     image: '/image/BrewTime.png',
+    text: 'The time water stays in contact with coffee impacts its flavor—around 4 minutes for French press, 2-4 minutes for pour-over, and 25-30 seconds for espresso. Adjusting brew time helps you achieve the perfect taste!',
+    buttonText: 'Brewing Method',
+    href: 'https://podiumcoffeeclub.com/blogs/blog/brewing-time-for-different-coffee-brewing-methods?srsltid=AfmBOooYpTiwGo5JmqfCDxe4gpN5kmI1jVVIO8fNuS2slRWKlaahx8J6',
     altertext: 'error Image'
-  },{
-    title: 'Water Quality and Temperature',
-    altertext: 'error Image'
-  }]
+  }];
   
   return (
+    // top part section
     <motion.div
     initial={{ opacity: 0, y: 0 }}
     animate={{ opacity: 1, y: 20 }}
@@ -46,7 +47,9 @@ const Home = () => {
         <p className='sm:w-[35rem] lg:w-[60rem] w-[19rem] text-center'>{coffeeText.coffeePara}</p>
       </div>
       
-      <div className='max-w-[75rem] m-auto mt-40'>
+      {/* middle section */}
+      <div className='lg:max-w-[75rem] sm:max-w-[100rem] md:max-w-[90rem] max-w-[400px] m-auto mt-40'>
+        <h1 className='font-medium text-center'>Three Essential Coffee Brewing Tips</h1>
         <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-rows gap-4 mt-10 sm:mx-10 mx-4'>
         {coffeeSection.map((item, index) => (
           <motion.div 
@@ -54,17 +57,17 @@ const Home = () => {
           animate={{ opacity: 1, y: 5 }}
           exit={{ opacity: 0, y: 0 }}
           transition={{ duration: 0.5 }}
-          className='rounded-md shadow-lg p-2 text-center  bg-[#f5f5f5]' key={index}>
-            <div className='flex flex-col gap-2 items-center justify-center'>
-            <h1 className='font-semibold'>{item.title}</h1>
-            <img src={item.image} alt={item.altertext} className=' h-[10rem] sm:h-[8rem] lg:h-[11.5rem] md:w-[20rem] rounded-lg shadow-lg border border-[#3b3b3b59] text-left font-serif'/>
-            <p className='text-xs px-2 md:w-[18rem] lg:w-[15rem] xl:w-[20rem] w-[16rem]'>{item.text}</p>
+          className='rounded-md shadow-lg p-2 text-center  bg-[#f5f5f5] flex flex-col justify-between' key={index}>
+            <div className='flex flex-col gap-4 items-center justify-center'>
+            <h1 className='font-semibold text-[1rem] sm:text-[0.9rem] lg:text-[1.1rem]'>{item.title}</h1>
+            <img src={item.image} alt={item.altertext} className=' h-[10rem] sm:h-[10rem] lg:h-[11.5rem] w-[20rem] lg:w-[17rem] xl:w-[20rem] rounded-lg shadow-lg border border-[#3b3b3b59] text-left font-serif'/>
+            <p className='text-xs px-2'>{item.text}</p>
             </div>
-            <motion.span className='float-right mr-5 mt-2'
+            <motion.span className='mr-5 mt-2 text-right'
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}>
               <a href={item.href} target='_blank' title='View?' 
-              className='text-xs border-2 border-[#2e2e2e33] py-[0.1rem] px-[0.5rem] font-medium '>
+              className='text-xs border-2 border-[#2e2e2e33] py-[0.1rem] px-[0.5rem] font-medium'>
               {item.buttonText}
               </a>
             </motion.span>
