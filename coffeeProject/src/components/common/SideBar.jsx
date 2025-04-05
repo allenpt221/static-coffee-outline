@@ -9,12 +9,48 @@ import { MdLocalPhone } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 
+const SmallScreen = () => {
+
+    const [sidebar, setSidebar] = useState(false);
+
+    const sidebarVariants = [
+        { icon: IoHome, href: '/' },
+        { icon: FaBoxOpen  , href: '/products'}, 
+        { icon: FaCircleExclamation, href: '/about'},
+        { icon: MdLocalPhone, href: '/contact'},
+    ];
+
+    return (
+        <div className="p-4 sm:hidden shadow-lg">
+            <div className='flex justify-between'>
+            <h1 className='font-medium text-[1.3rem]'>Coffee</h1>
+            <motion.button className='cursor-pointer sm:hidden border-box w-[1.5rem]' onClick={() => setSidebar(!sidebar)}>
+                {sidebar ? <IoClose size={25} /> : <RxHamburgerMenu size={20} />}
+            </motion.button>
+            </div>
+            <motion.div 
+            animate={{ height: sidebar ? '2rem' : '0' }}
+            transition={{ duration: 0.3 }}
+            className='flex justify-center mt-2'>
+            {sidebarVariants.map((item, index) => (
+                    <Link to={item.href}>
+                        {sidebar && <motion.div key={index} className={`flex flex-row items-center gap-4 px-3 py-1 rounded-sm ${item.href === location.pathname ? "shadow-xl bg-[#0202024b]" : 'hover:bg-[#8a8a8a1c]'} `}>
+                            <item.icon size={21} />
+                            </motion.div>
+                        }
+                    </Link>
+                ))}
+            </motion.div>
+        </div>
+    )
+}
+
+
 
 const SideBar = () => {
 
     const [sidebar, setSidebar] = useState(false);
     const [restlocal, setRestlocal] = useState(null);
-    const [screenSmall, setScreen] = useState(window.innerWidth <= 425);
     const location = useLocation();
 
     useEffect(() => {
@@ -28,21 +64,7 @@ const SideBar = () => {
             setRestlocal(JSON.parse(dataSet));
         } else {
             setRestlocal(null);
-        }
-
-        const handleResize = () => {
-            setScreen(window.innerWidth <= 768); // update screenSmall when window is resized
-          };
-      
-          // Add resize event listener
-          window.addEventListener('resize', handleResize);
-      
-          // Cleanup on unmount
-          return () => {
-            window.removeEventListener('resize', handleResize);
-          };  
-
-        
+        }        
     }, []);
 
 
@@ -55,10 +77,13 @@ const SideBar = () => {
         { sideItem: 'Contact', icon: MdLocalPhone, href: '/contact'},
     ];
   return (
+    <div>
+        < SmallScreen />
     <motion.div
-    className={`shadow-lg ${sidebar ? 'w-full sm:w-[10rem]' : 'w-full sm:w-[6rem]'}  p-4 flex flex-col sm:items-stretch items-center`}
-    animate={window.innerWidth < 636 ? { width: sidebar ? 'w-full' : 'w-full', } : { width: sidebar ? '10rem' : '6rem' }}
+    className={`shadow-lg ${sidebar ? 'w-[10rem]' : 'w-[6rem]'} h-screen p-4 sm:flex flex-col sm:items-stretch items-center hidden`}
+    animate={{ width: sidebar ? '10rem' : '6rem' }}
     >
+        
         <motion.button className='cursor-pointer hidden sm:block border-box w-[1.5rem]'
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 1 }}
@@ -71,7 +96,7 @@ const SideBar = () => {
         <motion.div className='flex sm:flex-col flex-row sm:gap-4 gap-10 mt-5 sm:mt-10 item-center justify-center'>
             {sidebarVariants.map((item, index) => (
                 <motion.div>
-                <Link to={item.href} key={index} className={`flex sm:flex-row flex-col items-center gap-4 px-3 py-1 rounded-sm ${item.href === location.pathname ? "shadow-xl bg-[#0202024b]" : 'hover:bg-[#8a8a8a1c]'} `} onClick={screenSmall ? () => setSidebar(false) : undefined}>
+                <Link to={item.href} key={index} className={`flex sm:flex-row flex-col items-center gap-4 px-3 py-1 rounded-sm ${item.href === location.pathname ? "shadow-xl bg-[#0202024b]" : 'hover:bg-[#8a8a8a1c]'} `}>
                 <item.icon size={21} />
                 <AnimatePresence> 
                     {sidebar && <motion.span
@@ -89,6 +114,7 @@ const SideBar = () => {
         </motion.div>
         </nav>
     </motion.div>
+    </div>
   )
 }
 
