@@ -83,7 +83,7 @@ const Home = () => {
         <div className='border border-[#2e2e2e23] w-[80%] m-auto'></div>
       {/* middle section 2 */}
       <div className='mt-20 max-w-[75rem] sm:max-w-[100rem] md:max-w-[90rem] m-auto sm:mt-25'>
-        <h1 className='text-center font-medium mb-5 mx-5'>The Six Caffeinated Most Drink To Buy: Fuel for Every Kind of Day</h1>
+        <h1 className='text-center font-medium mb-5 mx-5'>The Six Most Popular Caffeinated Drinks to Power Your Day: Fuel for Every Mood</h1>
           <SlideShow />
         </div>
     
