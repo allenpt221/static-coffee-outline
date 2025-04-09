@@ -7,7 +7,7 @@ import ProductMenu from './components/pages/ProductMenu'
 const App = () => {
   return (
     <div 
-    className='flex flex-col sm:flex-row overflow-hidden h-screen'>
+    className='flex flex-col sm:flex-row overflow-hidden h-screen font-sans'>
       <SideBar /> 
       <div className="flex-grow overflow-y-auto h-[100%]">
         <Routes>

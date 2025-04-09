@@ -88,8 +88,8 @@ const ProductMenu = () => {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.99 }}
                                     className='shadow-lg bg-[#9e9e9e25] rounded-md p-4'>
-                                    <img src={item.image} alt="Error" className='w-[20rem] h-[8rem] m-auto' />
-                                    <h1>{item.text}</h1>
+                                    <img src={item.image} alt="Error" className='w-[20rem] h-[8rem] m-auto mb-2' />
+                                    <h1 className='font-medium text-sm text-black/80'>{item.text}</h1>
                                 </motion.div>
                             ))}
                         </div>
