@@ -72,15 +72,20 @@ const ProductMenu = () => {
 
 
     return (
-        <section>
+        <motion.section
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 0 }}
+            transition={{ duration: 0.5 }}>
             <div className='p-5'>
                 <h1 className='font-semibold text-[1.4rem]'>Menu</h1>
                 <div className='border-b border-[#4b4b4b69] my-2 ' />
-                <div className='xl:max-w-[80rem] m-auto'>
-                    <h1 className='font-semibold text-[1.2rem] mt-5 mx-5'>Hot Coffees</h1>
+                {/* hot coffee section */}
+                <div className='lg:max-w-[90rem] md:max-w-[45rem] sm:max-w-[85rem] max-w-[20rem] m-auto'>
+                    <h1 className='font-semibold text-[1.2rem] mt-5 mx-5'>Hot Coffee</h1>
                     <div className='border-b border-[#4b4b4b69] my-2 mx-5' />
                     <div className='xl:max-w-[65rem] m-auto'>
-                        <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4 mt-5 text-center'>
+                        <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4 mt-5 text-center'>
                             {hotcoffees.map((item) => (
                                 <motion.div 
                                     key={item.id}
@@ -94,7 +99,13 @@ const ProductMenu = () => {
                             ))}
                         </div>
                     </div>
+                    {/* ice coffee section */}
+                    <div className='mt-10'>
+                        <h1 className='text-[1.2rem] font-semibold mt-5 mx-5'>Ice Caffee</h1>
+                        <div className='border-b border-[#4b4b4b69] my-2 mx-5' />
+                    </div>
                 </div>
+                
             </div>
 
             {/* Conditionally render the ModalMenu component */}
@@ -108,7 +119,7 @@ const ProductMenu = () => {
                     isClose={() => setIsOpen(null)} 
                 />
             )}
-        </section>
+        </motion.section>
     );
 }
 
