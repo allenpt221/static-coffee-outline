@@ -1,69 +1,69 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import {AnimatePresence,  motion } from 'framer-motion'
 import ModalMenu from '../common/ModalMenu';
 
 const ProductMenu = () => {
     const [isOpen, setIsOpen] = useState(null);
 
     const hotcoffees = [
-        { id: 0, image: '/image/MeasureCoffee.png', text: 'Espresso' },
-        { id: 1, image: '/image/MeasureCoffee.png', text: 'Americano' },
-        { id: 2, image: '/image/MeasureCoffee.png', text: 'Latte' },
-        { id: 3, image: '/image/MeasureCoffee.png', text: 'Cappuccino' },
-        { id: 4, image: '/image/MeasureCoffee.png', text: 'Flat White' },
-        { id: 5, image: '/image/MeasureCoffee.png', text: 'Macchiato' },
-        { id: 6, image: '/image/MeasureCoffee.png', text: 'Mocha' },
-        { id: 7, image: '/image/MeasureCoffee.png', text: 'French Press' },
-        { id: 8, image: '/image/MeasureCoffee.png', text: 'Irish Coffee' }
+        { id: 0, image: '/image/HotCoffee/Espresso.png', text: 'Espresso' },
+        { id: 1, image: '/image/HotCoffee/Americano.png', text: 'Americano' },
+        { id: 2, image: '/image/HotCoffee/Latte.png', text: 'Latte' },
+        { id: 3, image: '/image/HotCoffee/Cappuccino.png', text: 'Cappuccino' },
+        { id: 4, image: '/image/HotCoffee/FlatWhite.png', text: 'Flat White' },
+        { id: 5, image: '/image/HotCoffee/Macchiato.png', text: 'Macchiato' },
+        { id: 6, image: '/image/HotCoffee/Mocha.png', text: 'Mocha' },
+        { id: 7, image: '/image/HotCoffee/Turkish.png', text: 'Turkish Coffee' },
+        { id: 8, image: '/image/HotCoffee/Irish.png', text: 'Irish Coffee' }
     ];
 
     const ModalMenus = [
         {
-            image: '/image/MeasureCoffee.png',
+            image: '/image/HotCoffee/Espresso.png',
             title: 'Espresso',
             descrp: 'Espresso is a concentrated coffee beverage brewed by forcing hot water through finely-ground coffee beans. It serves as the base for many coffee drinks.',
             healthBene: 'Strong, Bold, Energizing'
         },
         {
-            image: '/image/MeasureCoffee.png',
+            image: '/image/HotCoffee/Americano.png',
             title: 'Americano',
             descrp: 'Americano is a coffee drink made by diluting espresso with hot water, resulting in a similar strength to brewed coffee but with a different flavor profile.',
             healthBene: 'Rich, Smooth, Bold'
         },
         {
-            image: '/image/MeasureCoffee.png',
+            image: '/image/HotCoffee/Latte.png',
             title: 'Latte',
             descrp: 'Latte is a coffee drink made with espresso and steamed milk, topped with a small amount of milk foam. It has a creamy texture and is often flavored with syrups.',
             healthBene: 'Creamy, Velvety, Smooth'
         },
         {
-            image: '/image/MeasureCoffee.png',
+            image: '/image/HotCoffee/Cappuccino.png',
             title: 'Cappuccino',
             descrp: 'Cappuccino is made with espresso, hot milk, and a layer of foamed milk, creating a creamy texture and a balance between the strength of coffee and milk.',
             healthBene: 'Frothy, Balanced, Creamy'
         },{
-            image: '/image/MeasureCoffee.png',
+            image: '/image/HotCoffee/FlatWhite.png',
             title: 'Flat White',
             descrp: 'Flat White is a coffee drink made with espresso and microfoam (steamed milk with small, fine bubbles), resulting in a velvety texture and strong coffee flavor.',
             healthBene: 'Smooth, Creamy, Rich'
 
         },{
-            image: '/image/MeasureCoffee.png',
+            image: '/image/HotCoffee/Macchiato.png',
             title: 'Macchiato',
             descrp: 'Macchiato is an espresso-based drink with a small amount of steamed milk or foam, allowing the espresso flavor to shine through.',
             healthBene: 'Velvety, Smooth, Creamy'
         },{
-            image: '/image/MeasureCoffee.png',
+            image: '/image/HotCoffee/Mocha.png',
             title: 'Mocha',
             descrp: 'Mocha is a chocolate-flavored variant of a latte, made with espresso, steamed milk, and chocolate syrup or cocoa powder.',
             healthBene: 'Bold, Strong, Layered'
         },{
-            image: '/image/MeasureCoffee.png',
-            title: 'French Press',
-            descrp: 'French Press is a method of brewing coffee by steeping coarsely ground coffee beans in hot water and then pressing down a plunger to separate the grounds.',
-            healthBene: 'Bold, Full-bodied, Flavorful'
+            image: '/image/HotCoffee/Turkish.png',
+            title: 'Turkish Coffee',
+            descrp: 'Turkish Coffee is a strong, unfiltered brew made in a small pot called a cezve, using very finely ground coffee. It has a thick, rich texture and bold flavor, often served sweet and in small cups. Traditionally enjoyed slowly, it’s both a cultural ritual and a symbol of hospitality—sometimes even followed by fortune-telling from the coffee grounds.',
+            healthBene: 'Rich, Spicy, Intense'
         },{
-            image: '/image/MeasureCoffee.png',
+            image: '/image/HotCoffee/Irish.png',
             title: 'Irish Coffee',
             descrp: 'Irish Coffee is a cocktail made with hot coffee, Irish whiskey, sugar, and topped with cream. It is often enjoyed as a dessert drink.',
             healthBene: 'Warm, Spiked, Smooth'
@@ -109,6 +109,7 @@ const ProductMenu = () => {
             </div>
 
             {/* Conditionally render the ModalMenu component */}
+            <AnimatePresence>
             {isOpen !== null && (
                 <ModalMenu 
                     isOpen={true}
@@ -119,6 +120,7 @@ const ProductMenu = () => {
                     isClose={() => setIsOpen(null)} 
                 />
             )}
+            </AnimatePresence>
         </motion.section>
     );
 }
