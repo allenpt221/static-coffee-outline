@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 
 import SlideShow from '../common/slideshow';
+import { Link } from 'react-router-dom';
 
 
 
@@ -47,13 +48,13 @@ const Home = () => {
     exit={{ opacity: 0, y: 0 }}
     transition={{ duration: 0.5 }} 
     className='w-full mb-24 mt-5 overflow'>
-      <div className='flex justify-center gap-2 flex-col items-center'>
+      <div className='flex justify-center gap-5 flex-col items-center'>
         <h1 className='font-semibold'>{coffeeText.coffeheader}</h1>
         <p className='sm:w-[35rem] lg:w-[60rem] w-[19rem] text-center'>{coffeeText.coffeePara}</p>
       </div>
       
       {/* middle section */}
-      <div className='lg:max-w-[75rem] sm:max-w-[100rem] md:max-w-[90rem] max-w-[400px] m-auto mt-20 sm:mt-40 mb-28'>
+      <div className='lg:max-w-[75rem] sm:max-w-[100rem] md:max-w-[90rem] max-w-[400px] m-auto mt-20 sm:mt-21 mb-28'>
         <h1 className='font-medium text-center'>Three Essential Coffee Brewing Tips</h1>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-4 mt-10 md:mx-3 sm:mx-10 mx-4'>
         {coffeeSection.map((item, index) => (

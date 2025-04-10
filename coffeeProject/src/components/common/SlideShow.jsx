@@ -76,7 +76,7 @@ const SlideShow = () => {
         ];
       };
   return (
-    <div className='flex justify-center mx-2'>
+    <div className='flex justify-center sm:items-stretch items-center mx-2'>
             <div onClick={nextSlide} className='cursor-pointer box-border flex items-center md:h-[350px] h-[400px] '>
             <motion.span
             whileHover={{ scale: 1.4 }}
