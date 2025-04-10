@@ -8,55 +8,55 @@ const SlideShow = () => {
 
     const sevenCoffeeIdeas = [{
         coffee: 'Vanilla Latte',
-        img: 'image/BrewTime.png',
+        img: 'image/IceCafe/IceVanilla.png',
         alternative: 'error image',
         descp: 'A smooth, sweet blend of espresso, steamed milk, and vanilla syrup. Perfect for a cozy morning!',
         whyPopular: 'It\'s creamy and comforting with a touch of sweetness, perfect for those who like a milder coffee flavor.',
       },{
         coffee: 'Caramel Macchiato',
-        img: 'image/BrewTime.png',
+        img: 'image/IceCafe/IceMacchiato.png',
         alternative: 'error image',
         descp: 'Espresso with steamed milk, vanilla syrup, and a drizzle of caramel.',
         whyPopular: 'The combination of caramel and espresso is irresistible, making it a favorite for many.',
       },{
-        coffee: 'Mocha',
-        img: 'image/BrewTime.png',
+        coffee: 'Hot Mocha',
+        img: 'image/HotCoffee/Mocha.png',
         alternative: 'error image',
         descp: 'A rich combination of espresso, steamed milk, and chocolate syrup, often topped with whipped cream.',
         whyPopular: 'Perfect for chocolate lovers who want a little caffeine boost. It’s like dessert in a cup!',
       }, {
         coffee: 'Flat White',
-        img: 'image/BrewTime.png',
+        img: 'image/HotCoffee/FLatWhite.png',
         alternative: 'error image',
         descp: 'A smooth and velvety drink made with espresso and steamed milk, with less foam than a cappuccino.',
         whyPopular: 'It has a strong coffee flavor with a creaminess that isn’t too sweet',
       }, {
         coffee: 'Iced Latte',
-        img: 'image/BrewTime.png',
+        img: 'image/IceCafe/IceCaramelLatte.png',
         alternative: 'error image',
         descp: 'Chilled espresso mixed with cold milk and ice.',
         whyPopular: 'A refreshing twist on a classic latte, perfect for hot days while still providing a caffeine punch.',
       },{
         coffee: 'Cappuccino',
-        img: 'image/BrewTime.png',
+        img: 'image/HotCoffee/Cappuccino.png',
         alternative: 'error image',
         descp: 'Equal parts espresso, steamed milk, and foam, often topped with a dusting of cocoa powder or cinnamon.',
         whyPopular: 'The balanced espresso flavor with the airy foam makes it a go-to for coffee enthusiasts.',
       },{
         coffee: 'Espresso',
-        img: 'image/BrewTime.png',
+        img: 'image/HotCoffee/Espresso.png',
         alternative: 'error image',
         descp: 'A concentrated coffee brewed by forcing hot water through finely-ground coffee beans.',
         whyPopular: 'The purest form of coffee, loved for its strong flavor and versatility in other drinks.',
       },{
-        coffee: 'Affogato',
-        img: 'image/BrewTime.png',
+        coffee: 'Matcha Latte',
+        img: 'image/IceCafe/MatchaLatte.png',
         alternative: 'error image',
         descp: 'A scoop of vanilla ice cream or gelato topped with a shot of hot espresso.',
         whyPopular: 'It’s a delightful dessert that combines the richness of ice cream with the boldness of espresso.',
       }, {
         coffee: 'Irish Coffee',
-        img: 'image/BrewTime.png',
+        img: 'image/HotCoffee/Irish.png',
         alternative: 'error image',
         descp: 'A blend of hot coffee, Irish whiskey, sugar, and topped with whipped cream.',
         whyPopular: 'It’s a warming drink that combines the best of both worlds—coffee and a little kick from whiskey!',
@@ -90,7 +90,7 @@ const SlideShow = () => {
               <div className="flex flex-col gap-2 bg-[#a7a7a72a] shadow-xl rounded-md py-5 lg:h-[21rem] md:h-[23rem] " key={index}>
                 <h1 className='font-medium text-center'>{scrItem.coffee}</h1>
                 <div className='sm:px-9 px-5 flex flex-col gap-5'>
-                <img src={scrItem.img} alt={scrItem.alternative} className='shadow-lg border border-[#3b3b3b59]  xl:h-[8rem] xl:w-[20rem] h-[10rem] w-[25rem] m-auto rounded-lg' />
+                <img src={scrItem.img} alt={scrItem.alternative} className='shadow-lg border border-[#3b3b3b59]  xl:h-[10.2rem] xl:w-[20rem] h-[10rem] w-[25rem] m-auto rounded-lg' />
                 <p className='text-xs'><span className='font-medium'>description: </span>{scrItem.descp}</p>
                 <p className='text-xs'><span className='font-medium'>Why it's popular: </span>{scrItem.whyPopular}</p>
                 </div>

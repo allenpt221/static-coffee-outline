@@ -80,57 +80,52 @@ export const ModalMenus = [
 // exporting arrays of Icecoffee items and their details for use in the modal
 export const ModalMenusIce = [
     {
-        image: '/image/IceCafe/IcedAmericano.png',
+        image: '/image/IceCafe/Americano.png',
         title: 'Iced Americano',
         descrp: 'Iced Americano is a refreshing coffee drink made by diluting espresso with cold water and ice, resulting in a smooth and bold flavor.',
         healthBene: 'Refreshing, Bold, Smooth'
     },{
-        image: '/image/IceCoffee/IcedLatte.png',
+        image: '/image/IceCafe/IceCaramelLatte.png',
         title: 'Iced Latte',
         descrp: 'Iced Latte is a cold coffee drink made with espresso and chilled milk, served over ice. It has a creamy texture and can be flavored with syrups.',
         healthBene: 'Creamy, Smooth, Refreshing'
     },{
-        image: '/image/IceCoffee/IcedCappuccino.png',
+        image: '/image/IceCafe/IceMocha.png',
         title: 'Iced Mocha',
         descrp: 'Iced Mocha is a cold coffee drink made with espresso, chocolate syrup, and milk, served over ice. It has a rich chocolate flavor and is often topped with whipped cream.',
         healthBene: 'Rich, Creamy, Sweet'
     },{
-        image: '/image/IceCoffee/IcedFlatWhite.png',
+        image: '/image/IceCafe/IceMacchiato.png',
         title: 'Iced Caramel Macchiato',
         descrp: 'Iced Caramel Macchiato is a cold coffee drink made with espresso, milk, and caramel syrup, served over ice. It has a sweet and creamy flavor.',
         healthBene: 'Sweet, Creamy, Refreshing'
     }, {
-        image: '/image/IceCoffee/IcedMacchiato.png',
+        image: '/image/IceCafe/SweetCream.png',
         title: 'Iced Coffee With Sweet cream',
         descrp: 'Iced Coffee with Sweet Cream is a cold coffee drink made with brewed coffee, ice, and sweet cream. It has a rich and creamy flavor.',
         healthBene: 'Rich, Creamy, Sweet'
     }, {
-        image: '/image/IceCoffee/IcedMocha.png',
+        image: '/image/IceCafe/EspressoTonic.png',
         title: 'Iced Espresso Tonic',
         descrp: 'Iced Espresso Tonic is a refreshing coffee drink made with espresso, tonic water, and ice. It has a unique flavor profile that combines the bitterness of coffee with the effervescence of tonic.',
         healthBene: 'Refreshing, Unique, Bold'
     }, {
-        image: '/image/IceCoffee/IcedTurkish.png',
+        image: '/image/IceCafe/Vietnamese.png',
         title: 'Vietnamese Iced Coffee',
         descrp: 'Vietnamese Iced Coffee is a strong coffee drink made with dark roast coffee, sweetened condensed milk, and ice. It has a rich and sweet flavor.',
         healthBene: 'Rich, Sweet, Bold'
-    }, {
-        image: '/image/IceCoffee/IcedIrish.png',
-        title: 'Iced Dirty Chai Latte',
-        descrp: 'Iced Dirty Chia Latte is a cold coffee drink made with espresso, chia seeds, and milk, served over ice. It has a unique texture and flavor.',
-        healthBene: 'Unique, Creamy, Refreshing'
     },{
-        image : '/image/IceCoffee/IcedTurkish.png',
+        image : '/image/IceCafe/BrownSugarShaken.png',
         title: 'Iced Brown Sugar Shaken Espresso',
         descrp: 'Iced Brown Sugar Shaken Espresso is a cold coffee drink made with espresso, brown sugar, and ice, shaken to create a frothy texture.',
         healthBene: 'Sweet, Bold, Refreshing'
     }, {
-        image: '/image/IceCoffee/IcedIrish.png',
+        image: '/image/IceCafe/MatchaLatte.png',
         title: 'Iced Matcha Latte',
         descrp: 'Iced Matcha Latte is a cold drink made with matcha green tea powder, milk, and ice. It has a unique flavor and is often sweetened.',
         healthBene: 'Unique, Creamy, Refreshing'
     }, {
-        image: '/image/IceCoffee/IcedTurkish.png',
+        image: '/image/IceCafe/DirtyMatcha.png',
         title: 'Iced Matcha Espresso Fusion',
         descrp: 'Iced Matcha Espresso Fusion is a cold drink made with matcha green tea powder, espresso, milk, and ice. It has a unique flavor and is often sweetened.',
         healthBene: 'Unique, Creamy, Refreshing'
