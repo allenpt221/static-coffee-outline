@@ -131,3 +131,11 @@ export const ModalMenusIce = [
         healthBene: 'Unique, Creamy, Refreshing'
     }
 ];
+
+export const pastryMenu = [
+    { id: 0, image: '/image/Pastry/Croissant.png', text: 'Croissant'},
+    { id: 1, image: '/image/Pastry/DanishPastry', text: 'Danish Parsty'},
+    { id: 2, image: '/image/Pastry/PainAuChocolat', text: 'Pain Au Chocolat'},
+    { id: 3, image: '/image/Pastry/CinnamonRoll', text: 'Cinnamon Roll'},
+    { id: 4, image: 'image/Pastry/PortugesePastel', text: 'Portuguese Pastel De Nata'}
+];

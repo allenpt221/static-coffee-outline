@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import {AnimatePresence,  motion } from 'framer-motion'
-import ModalMenu from '../common/ModalMenu';
 
-import {ModalMenus, ModalMenusIce, hotcoffees, Icecoffees } from '../common/exportItem/Exports';
-import ModalMenuIce from '../common/ModalMenuIce';
+
+import {ModalMenus, ModalMenusIce, hotcoffees, Icecoffees, pastryMenu } from '../common/exportItem/Exports';
+
+// modal imports
+import ModalMenu from '../common/modals/ModalMenu';
 
 const ProductMenu = () => {
     const [isOpenModalHot, SetisOpenModalHot] = useState(null);
     const [isOpenModalIce, SetisOpenModalIce] = useState(null);
-
+    const [isOpenModalPastry, SetisOpenModalPastry] = useState(null);
 
     
 
@@ -64,6 +66,22 @@ const ProductMenu = () => {
                     {/* pasty section */}
                     <div className='mt-10'>
                         <h1 className='text-[1.2rem] font-semibold mt-5 mx-5'>Sweet Layers</h1>
+                        <div className='border-b border-[#4b4b4b69] my-2 mx-5' />
+                        <div className='xl:max-w-[65rem] m-auto'>
+                        <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4 mt-5 text-center'>
+                            {pastryMenu.map((Pastry) => (
+                                <motion.div 
+                                    key={Pastry}
+                                    onClick={() => SetisOpenModalPastry(items.id)}
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.99 }}
+                                    className='shadow-lg bg-[#9e9e9e25] rounded-md p-4'>
+                                    <img src={Pastry.image} alt="Error" className='w-[20rem] h-[8rem] m-auto mb-2' />
+                                    <h1 className='font-medium text-sm text-black/80'>{Pastry.text}</h1>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
                     </div>
                 </div>
                 
@@ -83,7 +101,7 @@ const ProductMenu = () => {
             )}
 
             {isOpenModalIce !== null && (
-                <ModalMenuIce 
+                <ModalMenu 
                 isOpen={true}
                 image={ModalMenusIce[isOpenModalIce].image}
                 title={ModalMenusIce[isOpenModalIce].title}
@@ -92,6 +110,7 @@ const ProductMenu = () => {
                 isClose={() => SetisOpenModalIce(null)} 
                 />
             )}
+            
             </AnimatePresence>
 
             
