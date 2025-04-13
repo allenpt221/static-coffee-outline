@@ -3,10 +3,11 @@ import {AnimatePresence,  motion } from 'framer-motion'
 import ModalMenu from '../common/ModalMenu';
 
 import {ModalMenus, ModalMenusIce, hotcoffees, Icecoffees } from '../common/exportItem/Exports';
+import ModalMenuIce from '../common/ModalMenuIce';
 
 const ProductMenu = () => {
-    const [isOpen, setIsOpen] = useState(null);
-
+    const [isOpenModalHot, SetisOpenModalHot] = useState(null);
+    const [isOpenModalIce, SetisOpenModalIce] = useState(null);
 
 
     
@@ -23,14 +24,14 @@ const ProductMenu = () => {
                 <div className='border-b border-[#4b4b4b69] my-2 ' />
                 {/* hot coffee section */}
                 <div className='lg:max-w-[90rem] md:max-w-[45rem] sm:max-w-[85rem] max-w-[20rem] m-auto'>
-                    <h1 className='font-semibold text-[1.2rem] mt-5 mx-5'>Hot Coffee</h1>
+                    <h1 className='font-semibold text-[1.2rem] mt-5 mx-5'>Morning Roast</h1>
                     <div className='border-b border-[#4b4b4b69] my-2 mx-5' />
                     <div className='xl:max-w-[65rem] m-auto'>
                         <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4 mt-5 text-center'>
                             {hotcoffees.map((item) => (
                                 <motion.div 
                                     key={item.id}
-                                    onClick={() => setIsOpen(item.id)}  // Pass the function reference with the correct index
+                                    onClick={() => SetisOpenModalHot(item.id)}  // Pass the function reference with the correct index
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.99 }}
                                     className='shadow-lg bg-[#9e9e9e25] rounded-md p-4'>
@@ -42,14 +43,14 @@ const ProductMenu = () => {
                     </div>
                     {/* ice coffee section */}
                     <div className='mt-10'>
-                        <h1 className='text-[1.2rem] font-semibold mt-5 mx-5'>Ice Caffee</h1>
+                        <h1 className='text-[1.2rem] font-semibold mt-5 mx-5'>Chilled Coffee</h1>
                         <div className='border-b border-[#4b4b4b69] my-2 mx-5' />
                         <div className='xl:max-w-[65rem] m-auto'>
                         <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4 mt-5 text-center'>
                             {Icecoffees.map((items) => (
                                 <motion.div 
                                     key={items}
-                                    // Pass the function reference with the correct index
+                                    onClick={() => SetisOpenModalIce(items.id)}
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.99 }}
                                     className='shadow-lg bg-[#9e9e9e25] rounded-md p-4'>
@@ -60,20 +61,35 @@ const ProductMenu = () => {
                         </div>
                     </div>
                     </div>
+                    {/* pasty section */}
+                    <div className='mt-10'>
+                        <h1 className='text-[1.2rem] font-semibold mt-5 mx-5'>Sweet Layers</h1>
+                    </div>
                 </div>
                 
             </div>
 
             {/* Conditionally render the ModalMenu component */}
             <AnimatePresence>
-            {isOpen !== null && (
+            {isOpenModalHot !== null && (
                 <ModalMenu 
                     isOpen={true}
-                    image={ModalMenus[isOpen].image}
-                    title={ModalMenus[isOpen].title}
-                    descrp={ModalMenus[isOpen].descrp}
-                    healthBene={ModalMenus[isOpen].healthBene}
-                    isClose={() => setIsOpen(null)} 
+                    image={ModalMenus[isOpenModalHot].image}
+                    title={ModalMenus[isOpenModalHot].title}
+                    descrp={ModalMenus[isOpenModalHot].descrp}
+                    healthBene={ModalMenus[isOpenModalHot].healthBene}
+                    isClose={() => SetisOpenModalHot(null)} 
+                />
+            )}
+
+            {isOpenModalIce !== null && (
+                <ModalMenuIce 
+                isOpen={true}
+                image={ModalMenusIce[isOpenModalIce].image}
+                title={ModalMenusIce[isOpenModalIce].title}
+                descrp={ModalMenusIce[isOpenModalIce].descrp}
+                healthBene={ModalMenusIce[isOpenModalIce].healthBene}
+                isClose={() => SetisOpenModalIce(null)} 
                 />
             )}
             </AnimatePresence>

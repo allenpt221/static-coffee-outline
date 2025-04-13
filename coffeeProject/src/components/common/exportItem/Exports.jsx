@@ -19,9 +19,9 @@ export const Icecoffees = [
     { id: 4, image: '/image/IceCafe/SweetCream.png', text: 'Iced Coffee With Sweet cream' },
     { id: 5, image: '/image/IceCafe/EspressoTonic.png', text: 'Iced Espresso Tonic' },
     { id: 6, image: '/image/IceCafe/Vietnamese.png', text: 'Vietnamese Iced Coffee' },
-    { id: 8, image: '/image/IceCafe/BrownSugarShaken.png', text: 'Iced Brown Sugar Shaken Espresso' },
-    { id: 9, image: '/image/IceCafe/MatchaLatte.png', text: 'Iced Matcha Latte' },
-    { id: 10, image: '/image/IceCafe/DirtyMatcha.png', text: 'Iced Matcha Espresso Fusion' }
+    { id: 7, image: '/image/IceCafe/BrownSugarShaken.png', text: 'Iced Brown Sugar Shaken Espresso' },
+    { id: 8, image: '/image/IceCafe/MatchaLatte.png', text: 'Iced Matcha Latte' },
+    { id: 9, image: '/image/IceCafe/DirtyMatcha.png', text: 'Iced Matcha Espresso Fusion' }
 ];
 
 // exporting arrays of Hotcoffee items and their details for use in the modal
@@ -119,7 +119,7 @@ export const ModalMenusIce = [
         title: 'Iced Brown Sugar Shaken Espresso',
         descrp: 'Iced Brown Sugar Shaken Espresso is a cold coffee drink made with espresso, brown sugar, and ice, shaken to create a frothy texture.',
         healthBene: 'Sweet, Bold, Refreshing'
-    }, {
+    },{
         image: '/image/IceCafe/MatchaLatte.png',
         title: 'Iced Matcha Latte',
         descrp: 'Iced Matcha Latte is a cold drink made with matcha green tea powder, milk, and ice. It has a unique flavor and is often sweetened.',
