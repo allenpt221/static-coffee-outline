@@ -137,5 +137,41 @@ export const pastryMenu = [
     { id: 1, image: '/image/Pastry/DanishPastry', text: 'Danish Parsty'},
     { id: 2, image: '/image/Pastry/PainAuChocolat', text: 'Pain Au Chocolat'},
     { id: 3, image: '/image/Pastry/CinnamonRoll', text: 'Cinnamon Roll'},
-    { id: 4, image: 'image/Pastry/PortugesePastel', text: 'Portuguese Pastel De Nata'}
+    { id: 4, image: 'image/Pastry/PortugesePastel', text: 'Portuguese Pastel De Nata'},
+    { id: 5, image: 'image/Pastry/Éclair', text: 'Éclair'}
 ];
+
+export const ModalPastry = [
+    {
+        image: '/image/Pastry/Croissant.png',
+        title: 'Croissant',
+        descrp: 'A buttery, golden crescent-shaped pastry made from layers of delicate, flaky dough. The croissant is the crown jewel of French baking light, airy, and crisp with a rich, melt-in-your-mouth texture.',
+        healthBene: 'Mood-boosting carbs'
+
+    },{
+        image: '',
+        title: 'Danish Parsty',
+        descrp: 'A sweet, laminated pastry that’s as beautiful as it is delicious. With its tender, golden layers and fruit or custard-filled center, the Danish is a versatile treat that can be topped with berries, cream cheese, or drizzled glaze.',
+        healthBene: 'Fruity antioxidant boost'
+    },{
+        image: '',
+        title: 'Pain Au Chocolat',
+        descrp: 'Think croissant meets chocolate bar. Pain au chocolat is made from the same flaky dough but folded around two bars of dark, silky chocolate. Baked to golden perfection',
+        healthBene: 'Dark chocolate antioxidants'
+    },{
+        image: '',
+        title: 'Cinnamon Roll',
+        descrp: 'A cozy swirl of soft, yeasted dough rolled with buttery cinnamon sugar and often topped with a sweet glaze or cream cheese frosting. Warm, spiced, and gooey in the best way, the cinnamon roll is a comfort classic',
+        healthBene: 'Cinnamon aids digestion'
+    }, {
+        image: '',
+        title: 'Portuguese Pastel De Nata',
+        descrp: 'A small yet mighty custard tart with a flaky, caramelized crust and a creamy, slightly brûléed filling. Served warm and dusted with cinnamon, this Portuguese delight balances crispy and silky textures with just the right amount of sweetness.',
+        healthBene: 'Protein from eggs'
+    },{
+        image: '',
+        title: 'Portuguese Pastel De Nata',
+        descrp: 'A long, elegant French pastry made from airy choux dough, filled with silky pastry cream and topped with a glossy chocolate glaze.',
+        healthBene: 'Energy-boosting carbs'
+    }
+]

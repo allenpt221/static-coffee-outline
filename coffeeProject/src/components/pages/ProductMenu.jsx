@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {AnimatePresence,  motion } from 'framer-motion'
 
 
-import {ModalMenus, ModalMenusIce, hotcoffees, Icecoffees, pastryMenu } from '../common/exportItem/Exports';
+import {ModalMenus, ModalMenusIce, hotcoffees, Icecoffees, pastryMenu, ModalPastry } from '../common/exportItem/Exports';
 
 // modal imports
 import ModalMenu from '../common/modals/ModalMenu';
@@ -37,7 +37,7 @@ const ProductMenu = () => {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.99 }}
                                     className='shadow-lg bg-[#9e9e9e25] rounded-md p-4'>
-                                    <img src={item.image} alt="Error" className='w-[20rem] h-[8rem] m-auto mb-2' />
+                                    <img src={item.image} alt="Error Morning Roast" className='w-[20rem] h-[8rem] m-auto mb-2' />
                                     <h1 className='font-medium text-sm text-black/80'>{item.text}</h1>
                                 </motion.div>
                             ))}
@@ -56,7 +56,7 @@ const ProductMenu = () => {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.99 }}
                                     className='shadow-lg bg-[#9e9e9e25] rounded-md p-4'>
-                                    <img src={items.image} alt="Error" className='w-[20rem] h-[8rem] m-auto mb-2' />
+                                    <img src={items.image} alt="Error Chilled Coffee" className='w-[20rem] h-[8rem] m-auto mb-2' />
                                     <h1 className='font-medium text-sm text-black/80'>{items.text}</h1>
                                 </motion.div>
                             ))}
@@ -72,11 +72,11 @@ const ProductMenu = () => {
                             {pastryMenu.map((Pastry) => (
                                 <motion.div 
                                     key={Pastry}
-                                    onClick={() => SetisOpenModalPastry(items.id)}
+                                    onClick={() => SetisOpenModalPastry(Pastry.id)}
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.99 }}
                                     className='shadow-lg bg-[#9e9e9e25] rounded-md p-4'>
-                                    <img src={Pastry.image} alt="Error" className='w-[20rem] h-[8rem] m-auto mb-2' />
+                                    <img src={Pastry.image} alt="Error Pastry" className='w-[20rem] h-[8rem] m-auto mb-2' />
                                     <h1 className='font-medium text-sm text-black/80'>{Pastry.text}</h1>
                                 </motion.div>
                             ))}
@@ -110,7 +110,17 @@ const ProductMenu = () => {
                 isClose={() => SetisOpenModalIce(null)} 
                 />
             )}
-            
+
+            {isOpenModalPastry !== null && (
+                <ModalMenu
+                isOpen={true}
+                image={ModalPastry[isOpenModalPastry].image}
+                title={ModalPastry[isOpenModalPastry].title}
+                descrp={ModalPastry[isOpenModalPastry].descrp}
+                healthBene={ModalPastry[isOpenModalPastry].healthBene}
+                isClose={() => SetisOpenModalPastry(null)}
+                />
+            )}
             </AnimatePresence>
 
             
