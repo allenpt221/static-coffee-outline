@@ -22,7 +22,7 @@ const ProductMenu = () => {
             exit={{ opacity: 0, y: 0 }}
             transition={{ duration: 0.5 }}>
             <div className='p-5 font-noto'>
-                <h1 className='font-semibold text-[1.4rem]'>Menu</h1>
+                <h1 className='font-semibold text-[1.4rem]'>Brewed</h1>
                 {/* hot coffee section */}
                 <div className='lg:max-w-[90rem] md:max-w-[45rem] sm:max-w-[85rem] max-w-[20rem] m-auto'>
                     <h1 className='font-semibold text-[1.2rem] mt-5 mx-5'>Morning Roast</h1>

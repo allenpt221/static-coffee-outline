@@ -72,7 +72,7 @@ const SideBar = () => {
 
     const sidebarVariants = [
         { sideItem: 'Home',  icon: IoHome, href: '/' },
-        { sideItem: 'Menu', icon: FaBoxOpen  , href: '/Menu'}, 
+        { sideItem: 'Café ', icon: FaBoxOpen  , href: '/Products'}, 
         { sideItem: 'About',  icon: FaCircleExclamation, href: '/about'},
         { sideItem: 'Contact', icon: MdLocalPhone, href: '/contact'},
     ];

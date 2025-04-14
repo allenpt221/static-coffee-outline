@@ -28,7 +28,7 @@ const App = () => {
         <ScrollToTop scrollRef={scrollRef} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Menu" element={<ProductMenu />} />
+          <Route path="/Products" element={<ProductMenu />} />
           <Route path="/about" element={<h1>About</h1>} />
           <Route path="/contact" element={<h1>Contact</h1>} />
         </Routes>
