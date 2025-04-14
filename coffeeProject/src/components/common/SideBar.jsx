@@ -15,7 +15,7 @@ const SmallScreen = () => {
 
     const sidebarVariants = [
         { icon: IoHome, href: '/' },
-        { icon: FaBoxOpen  , href: '/products'}, 
+        { icon: FaBoxOpen  , href: '/Menu'}, 
         { icon: FaCircleExclamation, href: '/about'},
         { icon: MdLocalPhone, href: '/contact'},
     ];
@@ -72,7 +72,7 @@ const SideBar = () => {
 
     const sidebarVariants = [
         { sideItem: 'Home',  icon: IoHome, href: '/' },
-        { sideItem: 'Products', icon: FaBoxOpen  , href: '/products'}, 
+        { sideItem: 'Menu', icon: FaBoxOpen  , href: '/Menu'}, 
         { sideItem: 'About',  icon: FaCircleExclamation, href: '/about'},
         { sideItem: 'Contact', icon: MdLocalPhone, href: '/contact'},
     ];
@@ -80,17 +80,16 @@ const SideBar = () => {
     <div>
         < SmallScreen />
     <motion.div
-    className={`shadow-lg ${sidebar ? 'w-[10rem]' : 'w-[6rem]'} h-screen p-4 sm:flex flex-col sm:items-stretch items-center hidden`}
-    animate={{ width: sidebar ? '10rem' : '6rem' }}
+    className={`shadow-lg ${sidebar ? 'w-[10rem]' : 'w-[5rem]'} h-screen p-4 sm:flex flex-col sm:items-stretch items-center hidden`}
+    animate={{ width: sidebar ? '10rem' : '5rem' }}
     >
         
-        <motion.button className='cursor-pointer hidden sm:block border-box w-[1.5rem]'
+        <motion.button className='cursor-pointer hidden sm:block border-box w-[1.5rem] '
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 1 }}
         onClick={() => setSidebar(!sidebar, localStorage.setItem('sidebarState', JSON.stringify(!sidebar)))}>    
-            {sidebar ? <IoClose size={25} /> : <RxHamburgerMenu size={20} />}
+            {sidebar ? <IoClose size={25} /> : <RxHamburgerMenu size={25} />}
         </motion.button>
-        <h1 className={`font-medium text-[0.9rem] sm:text-[1.2rem] mt-5 ${sidebar ? 'text-center' : 'text-normal'}`}>Coffee</h1>
 
         <nav className='flex items-center justify-center sm:justify-normal'>
         <motion.div className='flex sm:flex-col flex-row sm:gap-4 gap-10 mt-5 sm:mt-10 item-center justify-center'>

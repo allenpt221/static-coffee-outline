@@ -2,61 +2,72 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MdKeyboardArrowLeft , MdKeyboardArrowRight } from "react-icons/md";
 
+// image import 
+import VanillaLatte from '/image/IceCafe/IceVanilla.png'
+import IceMacchiato from '/image/IceCafe/IceMacchiato.png'
+import Cappuccino from '/image/HotCoffee/Cappuccino.png'
+import FlatWhite from '/image/HotCoffee/FlatWhite.png'
+import Irish from '/image/HotCoffee/Irish.png'
+import Mocha from '/image/HotCoffee/Mocha.png'
+import Espresso from '/image/HotCoffee/Espresso.png'
+import IceLatte from '/image/IceCafe/IceLatte.png'
+import MatchaLatte from '/image/IceCafe/MatchaLatte.png'
+
 const SlideShow = () => {
 
     const [startIndex, setStartIndex] = useState(0);
 
     const sevenCoffeeIdeas = [{
         coffee: 'Vanilla Latte',
-        img: 'image/IceCafe/IceVanilla.png',
+        img: VanillaLatte,
         alternative: 'error image',
         descp: 'A smooth, sweet blend of espresso, steamed milk, and vanilla syrup. Perfect for a cozy morning!',
         whyPopular: 'It\'s creamy and comforting with a touch of sweetness, perfect for those who like a milder coffee flavor.',
       },{
         coffee: 'Caramel Macchiato',
-        img: 'image/IceCafe/IceMacchiato.png',
+        img: IceMacchiato,
         alternative: 'error image',
         descp: 'Espresso with steamed milk, vanilla syrup, and a drizzle of caramel.',
         whyPopular: 'The combination of caramel and espresso is irresistible, making it a favorite for many.',
       },{
         coffee: 'Hot Mocha',
-        img: 'image/HotCoffee/Mocha.png',
+        img: Mocha,
         alternative: 'error image',
         descp: 'A rich combination of espresso, steamed milk, and chocolate syrup, often topped with whipped cream.',
         whyPopular: 'Perfect for chocolate lovers who want a little caffeine boost. It’s like dessert in a cup!',
       }, {
         coffee: 'Flat White',
-        img: 'image/HotCoffee/FLatWhite.png',
+        img: FlatWhite,
         alternative: 'error image',
         descp: 'A smooth and velvety drink made with espresso and steamed milk, with less foam than a cappuccino.',
         whyPopular: 'It has a strong coffee flavor with a creaminess that isn’t too sweet',
       }, {
         coffee: 'Iced Latte',
-        img: 'image/IceCafe/IceCaramelLatte.png',
+        img: IceLatte,
         alternative: 'error image',
         descp: 'Chilled espresso mixed with cold milk and ice.',
         whyPopular: 'A refreshing twist on a classic latte, perfect for hot days while still providing a caffeine punch.',
       },{
         coffee: 'Cappuccino',
-        img: 'image/HotCoffee/Cappuccino.png',
+        img: Cappuccino,
         alternative: 'error image',
         descp: 'Equal parts espresso, steamed milk, and foam, often topped with a dusting of cocoa powder or cinnamon.',
         whyPopular: 'The balanced espresso flavor with the airy foam makes it a go-to for coffee enthusiasts.',
       },{
         coffee: 'Espresso',
-        img: 'image/HotCoffee/Espresso.png',
+        img: Espresso,
         alternative: 'error image',
         descp: 'A concentrated coffee brewed by forcing hot water through finely-ground coffee beans.',
         whyPopular: 'The purest form of coffee, loved for its strong flavor and versatility in other drinks.',
       },{
         coffee: 'Matcha Latte',
-        img: 'image/IceCafe/MatchaLatte.png',
+        img: MatchaLatte,
         alternative: 'error image',
         descp: 'A scoop of vanilla ice cream or gelato topped with a shot of hot espresso.',
         whyPopular: 'It’s a delightful dessert that combines the richness of ice cream with the boldness of espresso.',
       }, {
         coffee: 'Irish Coffee',
-        img: 'image/HotCoffee/Irish.png',
+        img: Irish,
         alternative: 'error image',
         descp: 'A blend of hot coffee, Irish whiskey, sugar, and topped with whipped cream.',
         whyPopular: 'It’s a warming drink that combines the best of both worlds—coffee and a little kick from whiskey!',

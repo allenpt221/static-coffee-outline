@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 
+
+
   const coffeeText = {
     coffeheader: 'Where Your Coffee Reflects Your Vibe',
     coffeePara: 'Whether you’re fueled by creativity or looking for a moment of calm, we\'ve got the perfect coffee to match your energy. Come discover the brew that mirrors your vibe and helps you embrace every moment.'
@@ -43,12 +45,12 @@ const Home = () => {
   return (
     // top part section
     <motion.div
-    initial={{ opacity: 0, y: 0 }}
-    animate={{ opacity: 1, y: 20 }}
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: 0 }}
     transition={{ duration: 0.5 }} 
-    className='w-full mb-24 mt-5 overflow'>
-      <div className='flex justify-center gap-5 flex-col items-center'>
+    className='w-full mb-24 overflow-hidden relative'>
+      <div className='flex justify-center gap-5 flex-col items-center mt-10'>
         <h1 className='font-semibold'>{coffeeText.coffeheader}</h1>
         <p className='sm:w-[35rem] lg:w-[60rem] w-[19rem] text-center'>{coffeeText.coffeePara}</p>
       </div>
@@ -84,7 +86,7 @@ const Home = () => {
         <div className='border border-[#2e2e2e23] w-[80%] m-auto'></div>
       {/* middle section 2 */}
       <div className='mt-20 max-w-[75rem] sm:max-w-[100rem] md:max-w-[90rem] m-auto sm:mt-25'>
-        <h1 className='text-center font-medium mb-5 mx-5'>The Six Most Popular Caffeinated Drinks to Power Your Day: Fuel for Every Mood</h1>
+        <h1 className='text-center font-medium mb-5 mx-5'>The Nine Most Popular Caffeinated Drinks to Power Your Day: Fuel for Every Mood</h1>
           <SlideShow />
         </div>
     
