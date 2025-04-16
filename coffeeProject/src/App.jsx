@@ -4,6 +4,7 @@ import Home from './components/pages/Home';
 import SideBar from './components/common/SideBar';
 import ProductMenu from './components/pages/ProductMenu';
 import About from './components/pages/About';
+import Contact from './components/pages/Contact';
 
 function ScrollToTop({ scrollRef }) {
   const { pathname } = useLocation();
@@ -31,7 +32,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Products" element={<ProductMenu />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<h1>Contact</h1>} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
   </div>
