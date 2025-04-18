@@ -82,16 +82,14 @@ const About = () => {
                 animate={{opacity: 1, y:0}}
                 exit={{opacity: 0, y: 0}}
                 transition={{duration: 0.2}}
-                className='w-[580px]'>
+                className='sm:w-[580px] w-[300px]'>
                 <p className='text-sm text-[#3a3a3ab2]'>{ourStoryText}</p>
                 </motion.div>
             )
             }
+            <div className={`border-t mt-1 ${isStoryOpen ? 'sm:w-[570px] w-[300px]': 'w-[300px]'} border-gray-300`}/>
             </AnimatePresence>
-            <motion.div 
-            animate={{width: isStoryOpen ? '580px': '280px'}}
-            className={`border-t mt-1 border-gray-300`}/>
-            
+
             <div className='flex justify-between items-center box-border w-[290px]'>
             <h4 className='text-sm font-medium my-2'>What Makes Us Different:</h4>
             <button className='bg-[#42424233] p-2 rounded-full'
@@ -106,14 +104,13 @@ const About = () => {
                 transition={{duration: 0.2}}
                 >
                 {DifferentMap.map((item) => (   
-                    <p className='text-sm m-2'><span className='font-medium'>• {item.spanItem}</span> {item.textItem} </p>
+                    <p className='font-medium m-2 text-sm'>• {item.spanItem}<span className='text-[#3a3a3ab2] font-normal'> {item.textItem} </span>  </p>
                 ))}
                 </motion.div>
             )}
+            <div className={`border-t mt-1 ${isMakeOpen ? 'sm:w-[770px] w-[330px]': 'w-[300px]'} border-gray-300`}/>
             </AnimatePresence>
-            <motion.div 
-            animate={{width: isMakeOpen ? '765px': '280px'}}
-            className={`border-t mt-1 border-gray-300`}/>
+            
             
             
             
