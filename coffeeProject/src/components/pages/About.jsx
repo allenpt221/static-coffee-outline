@@ -4,12 +4,29 @@ import { motion, AnimatePresence } from 'framer-motion';
 // import icons
 import { FaChevronUp } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
+import { VscCoffee } from "react-icons/vsc";
+import { MdHeadset } from "react-icons/md";
+import { RiPlantLine } from "react-icons/ri";
 
 
 const About = () => {
     const aboutText = ['We’re not just in the business of brewing coffee we’re here to craft experiences. Whether you\'re chasing inspiration, slowing down for a mindful moment, or simply vibing through your day, we believe your coffee should match your energy. Every cup we serve is designed to reflect your mood, your rhythm, and your lifestyle.'];
     const ourStoryText = ['At our core, we believe coffee should do more than just wake you up it should elevate your day. That’s why we’ve built a café experience around one simple idea: coffee that aligns with your lifestyle.'];
-
+    const BelieveIn = ['At our core, we believe coffee should be more than just a caffeine fix it should be a whole experience. From the first sip to the last slow moment, everything we serve is crafted with intention.'];
+    const CoffeeItem = [{
+        Icons: VscCoffee,
+        titleHead: 'Coffee as an Experience',
+        descrp: 'Every cup is a chance to pause, reconnect, and ground yourself. We see coffee as a daily ritual that fuels creativity, calm, and presence.'
+    }, {
+        Icons: MdHeadset,
+        titleHead: 'Creating Vibes, Not Just Beverages',
+        descrp: 'We don’t just serve drinks we shape moods. Whether you\'re in for deep focus or deep convos, we’ve got the perfect blend to match your energy.'
+    },{
+        Icons: RiPlantLine,
+        titleHead: 'Rooted in Responsibility',
+        descrp: 'We believe in better coffee for a better world. That means sourcing ethically, supporting local growers, and choosing sustainable practices that honor both people and the planet.'
+    }];
+    
     const DifferentMap = [
         {spanItem: 'Mood-Based Coffee: ', textItem: 'Whether you’re in flow mode, recharge mode, or relax mode we’ve got a brew to match.'},
         {spanItem: 'Specialty Beans: ', textItem: 'We use only high-quality, ethically-sourced beans roasted to bring out their natural character.'},
@@ -31,7 +48,25 @@ const About = () => {
                 <img src="/Image/AboutImage.png" alt="Error load" className='md:w-[35rem] md:h-[20rem] sm:w-[30rem] w-[20rem] h-[15rem] rounded-xl' />
             </div>
         </div>
+        
+        <div className='md:p-5 p-0 mt-5'>
+            <h1 className='font-medium text-[1.5rem]'>What We Believe In</h1>
+            <div className='box-border w-[50rem] m-1 text-sm'>
+                <p>{BelieveIn}</p>
+            </div>
+            <div className='flex flex-wrap max-w-[1200px] m-auto gap-3 mt-10 justify-center'>
+                {CoffeeItem.map((item) => (
+                    <div className='shadow-lg bg-gradient-to-br from-[#7e470044] to-[#7777772d] sm:p-5 py-5 px-2 flex flex-col items-center text-center rounded-md'>
+                        <span className='flex flex-row gap-2 items-center'>< item.Icons size={20}/> <h1 className='font-medium sm:text-[1rem] text-[0.9rem] bg-gradient-to-r from-[#7c420c] to-black/65 bg-clip-text text-transparent'>{item.titleHead}</h1></span>
+                        <div className='box-border sm:w-[300px] w-[280px] text-sm'>
+                        <p>{item.descrp}</p>
+                        </div>
+                    </div>
+                ))}    
+            </div>
+        </div>
 
+        {/* our story */}
         <div className='md:p-5 p-0 mt-5'>
             <h1 className='text-[1.5rem] font-medium'>Our Story</h1>
             <div className='flex justify-between items-center box-border w-[290px]'>
