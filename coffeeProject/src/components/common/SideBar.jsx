@@ -15,7 +15,7 @@ const SmallScreen = () => {
 
     const sidebarVariants = [
         { icon: IoHome, href: '/' },
-        { icon: FaBoxOpen  , href: '/Menu'}, 
+        { icon: FaBoxOpen  , href: '/Products'}, 
         { icon: FaCircleExclamation, href: '/about'},
         { icon: MdLocalPhone, href: '/contact'},
     ];
