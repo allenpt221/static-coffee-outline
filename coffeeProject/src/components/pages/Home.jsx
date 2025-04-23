@@ -1,8 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import SlideShow from '../common/slideshow';
-import { Link } from 'react-router-dom';
+import SlideShow from '../common/SlideShow'
 
 
 

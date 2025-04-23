@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from './components/pages/Home';
 import SideBar from './components/common/SideBar';

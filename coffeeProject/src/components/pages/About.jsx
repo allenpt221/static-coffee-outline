@@ -38,7 +38,7 @@ const About = () => {
     const [isMakeOpen, setIsMakeOpen] = useState(false);
 
   return (
-    <div className='m-4'>
+    <div className='m-4 h-screen'>
         <div className='flex flex-col md:flex-row items-center xl:max-w-[1100px] m-auto lg:gap-28 gap-10'>
             <div className='box-border sm:w-[450px] md:w-[400px] w-[270px]'>
                 <h1 className='font-bold md:text-[1.5rem] text-[1.2rem] '>Every cup we brew is made to match your<span className='text-[#945b06]'> mood</span>, your moment, your vibe.</h1>
