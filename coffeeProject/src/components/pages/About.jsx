@@ -8,8 +8,13 @@ import { VscCoffee } from "react-icons/vsc";
 import { MdHeadset } from "react-icons/md";
 import { RiPlantLine } from "react-icons/ri";
 
+// import image
+import aboutImage from "/Image/AboutImage.png"
+
 
 const About = () => {
+
+
     const aboutText = ['We’re not just in the business of brewing coffee we’re here to craft experiences. Whether you\'re chasing inspiration, slowing down for a mindful moment, or simply vibing through your day, we believe your coffee should match your energy. Every cup we serve is designed to reflect your mood, your rhythm, and your lifestyle.'];
     const ourStoryText = ['At our core, we believe coffee should do more than just wake you up it should elevate your day. That’s why we’ve built a café experience around one simple idea: coffee that aligns with your lifestyle.'];
     const BelieveIn = ['At our core, we believe coffee should be more than just a caffeine fix it should be a whole experience. From the first sip to the last slow moment, everything we serve is crafted with intention.'];
@@ -45,7 +50,7 @@ const About = () => {
                 <p className='text-xs mt-4'>{aboutText}</p>
             </div>
             <div>
-                <img src="/Image/AboutImage.png" alt="Error load" className='md:w-[35rem] md:h-[20rem] sm:w-[30rem] w-[20rem] h-[15rem] rounded-xl' />
+                <img src={aboutImage} alt="Error load" className={'md:w-[35rem] md:h-[20rem] sm:w-[30rem] w-[20rem] h-[15rem] rounded-xl'} />
             </div>
         </div>
         

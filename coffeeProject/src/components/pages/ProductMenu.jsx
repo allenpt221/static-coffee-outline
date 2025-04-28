@@ -108,7 +108,7 @@ const ProductMenu = () => {
                                     <div className={` ${loadingImage[Pastry.id] ? 'block' : 'hidden'}`}>
                                     {/* Show the image only when it's loaded */}
                                     <img
-                                    onLoad={() => handleImageLoad(items.id)}
+                                    onLoad={() => handleImageLoad(Pastry.id)}
                                     src={Pastry.image} alt="Error Pastry" className='w-[20rem] h-[8rem] m-auto mb-2' />
                                     <h1 className='font-medium text-sm text-black/80'>{Pastry.text}</h1>
                                     </div>
