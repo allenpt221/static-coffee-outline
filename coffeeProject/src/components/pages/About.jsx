@@ -9,7 +9,7 @@ import { MdHeadset } from "react-icons/md";
 import { RiPlantLine } from "react-icons/ri";
 
 // import image
-import aboutImage from "/Image/AboutImage.png"
+import aboutImage from "/image/AboutImage.png"
 
 
 const About = () => {
