@@ -95,7 +95,7 @@ const ProductMenu = () => {
                         <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4 mt-5 text-center'>
                             {pastryMenu.map((Pastry) => (
                                 <motion.div 
-                                    key={Pastry}
+                                    key={Pastry.id}
                                     onClick={() => SetisOpenModalPastry(Pastry.id)}
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.99 }}
