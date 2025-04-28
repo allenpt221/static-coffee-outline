@@ -24,13 +24,14 @@ const ProductMenu = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 0 }}
-            transition={{ duration: 0.5 }}>
+            transition={{ duration: 0.5 }}
+            >
             <div className='p-5 font-noto'>
                 <h1 className='font-semibold text-[1.4rem]'>Brewed</h1>
                 
                 {/* hot coffee section */}
                 <div className='lg:max-w-[90rem] md:max-w-[45rem] sm:max-w-[85rem] max-w-[20rem] m-auto'>
-                    <h1 className='font-semibold text-[1.2rem] mt-5 mx-5'>Morning Roast</h1>
+                    <h1 className='font-semibold text-[1.2rem] mt-5 mx-5 '>Morning Roast</h1>
                     <div className='border-b border-[#4b4b4b69] my-2 mx-5' />
                     <div className='xl:max-w-[65rem] m-auto'>
                         <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4 mt-5 text-center'>
@@ -51,7 +52,7 @@ const ProductMenu = () => {
                                     <img
                                     onLoad={() => handleImageLoad(item.id)}
                                     src={item.image} alt="Error Morning Roast" className='w-[20rem] h-[8rem] m-auto mb-2' />
-                                    <h1 className='font-medium text-sm text-black/80'>{item.text}</h1>
+                                    <h1 className='font-medium text-sm text-black/80 dark:text-white'>{item.text}</h1>
                                     </div>
                                 </motion.div>
                             ))}
@@ -80,7 +81,7 @@ const ProductMenu = () => {
                                     <img
                                     onLoad={() => handleImageLoad(items.id)}
                                     src={items.image} alt="Error Chilled Coffe" className='w-[20rem] h-[8rem] m-auto mb-2' />
-                                    <h1 className='font-medium text-sm text-black/80'>{items.text}</h1>
+                                    <h1 className='font-medium text-sm text-black/80 dark:text-white'>{items.text}</h1>
                                     </div>
                                 </motion.div>
                             ))}
@@ -110,7 +111,7 @@ const ProductMenu = () => {
                                     <img
                                     onLoad={() => handleImageLoad(Pastry.id)}
                                     src={Pastry.image} alt="Error Pastry" className='w-[20rem] h-[8rem] m-auto mb-2' />
-                                    <h1 className='font-medium text-sm text-black/80'>{Pastry.text}</h1>
+                                    <h1 className='font-medium text-sm text-black/80 dark:text-white'>{Pastry.text}</h1>
                                     </div>
                                 </motion.div>
                             ))}

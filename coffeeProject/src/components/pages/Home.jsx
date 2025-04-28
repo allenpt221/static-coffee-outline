@@ -76,7 +76,7 @@ const Home = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}>
               <a href={item.href} target='_blank' title='View?' 
-              className='text-xs border-2 border-[#2e2e2e33] py-[0.1rem] px-[0.5rem] font-medium'>
+              className='text-xs border-2 border-[#2e2e2e33] py-[0.1rem] px-[0.5rem] font-medium dark:border-white'>
               {item.buttonText}
               </a>
             </motion.span>

@@ -24,7 +24,7 @@ const ModalMenu = ({ isOpen, isClose, image, title, descrp, healthBene }) => {
                 </motion.button>
 
                 <div className='flex flex-col gap-2 px-5 py-3'>
-                    <h1 className="font-semibold text-3xl">{title}</h1>
+                    <h1 className="font-semibold text-3xl dark:text-black">{title}</h1>
                     <p className='text-sm text-black/60'>{descrp}</p>
                     <p className='text-xs text-black/100'>{healthBene}</p>
                 </div>
