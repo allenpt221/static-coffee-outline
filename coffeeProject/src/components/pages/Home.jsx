@@ -57,7 +57,7 @@ const Home = () => {
       </div>
       
       {/* middle section */}
-      <div className='lg:max-w-[75rem] sm:max-w-[100rem] md:max-w-[90rem] max-w-[400px] m-auto mt-20 sm:mt-21 mb-28'>
+      <div className='lg:max-w-[75rem] sm:max-w-[35rem] md:max-w-[90rem] max-w-[30rem] m-auto mt-20 sm:mt-21 mb-28'>
         <h1 className='font-medium text-center'>Three Essential Coffee Brewing Tips</h1>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-4 mt-10 md:mx-3 sm:mx-10 mx-4'>
         {coffeeSection.map((item, index) => (
