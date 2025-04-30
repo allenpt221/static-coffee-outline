@@ -8,8 +8,8 @@ import { FaChevronDown } from "react-icons/fa";
 
 // import image
 import aboutImage from "/image/AboutImage.png"
-
 import { brewText, aboutText, ourStoryText, BelieveIn, CoffeeItem, DifferentMap } from '../common/exportItem/aboutExports';
+
 
 
 const About = () => {
