@@ -13,7 +13,7 @@ const ModalMenu = ({ isOpen, isClose, image, title, descrp, healthBene }) => {
             exit={{ opacity: 0, y: -100 }} 
             transition={{ duration: 0.3 }}
             onClick={(e) => e.stopPropagation()}
-            className="flex sm:flex-row flex-col gap-2 bg-white sm:p-5 p-0 rounded-lg shadow-lg sm:items-start items-end text-start sm:w-[50rem] w-[19rem] mx-2">
+            className="flex sm:flex-row flex-col gap-2 bg-white sm:p-5 p-0 rounded-lg shadow-lg sm:items-start items-end text-start sm:w-[50rem] w-[19rem] mx-2 dark:text-black ">
                 <motion.button
                     onClick={isClose}
                     whileHover={{ scale: 1.1 }}
@@ -39,7 +39,7 @@ const ModalMenu = ({ isOpen, isClose, image, title, descrp, healthBene }) => {
                         onClick={isClose}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className='hidden sm:block absolute top-2 right-2'
+                        className='hidden sm:block absolute top-2 right-2 cursor-pointer'
                     >
                         <IoClose size={25} />
                     </motion.button>
