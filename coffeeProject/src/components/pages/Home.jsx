@@ -89,8 +89,7 @@ const Home = () => {
       <div className='mt-20 max-w-[75rem] sm:max-w-[100rem] md:max-w-[90rem] m-auto sm:mt-25'>
         <h1 className='text-center font-medium mb-5 mx-5'>The Nine Most Popular Caffeinated Drinks to Power Your Day: Fuel for Every Mood</h1>
           <SlideShow />
-        </div>
-    
+      </div>
     </motion.div>
   )
 }
