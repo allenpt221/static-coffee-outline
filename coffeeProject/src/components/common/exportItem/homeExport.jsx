@@ -1,6 +1,6 @@
-import Quality from '/image/QualityBeans.png';
-import Measure from '/image/MeasureCoffee.png';
-import BrewTime from '/image/BrewTime.png';
+import Quality from '/image/QualityBeans.webp';
+import Measure from '/image/MeasureCoffee.webp';
+import BrewTime from '/image/BrewTime.webp';
 
 export const coffeeText = {
     coffeheader: 'Where Your Coffee Reflects Your Vibe',

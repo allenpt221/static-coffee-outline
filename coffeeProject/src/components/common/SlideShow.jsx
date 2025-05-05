@@ -3,15 +3,15 @@ import { motion } from 'framer-motion'
 import { MdKeyboardArrowLeft , MdKeyboardArrowRight } from "react-icons/md";
 
 // image import 
-import VanillaLatte from '/image/IceCafe/IceVanilla.png'
-import IceMacchiato from '/image/IceCafe/IceMacchiato.png'
-import Cappuccino from '/image/HotCoffee/Cappuccino.png'
-import FlatWhite from '/image/HotCoffee/FlatWhite.png'
-import Irish from '/image/HotCoffee/Irish.png'
-import Mocha from '/image/HotCoffee/Mocha.png'
-import Espresso from '/image/HotCoffee/Espresso.png'
-import IceLatte from '/image/IceCafe/IceLatte.png'
-import MatchaLatte from '/image/IceCafe/MatchaLatte.png'
+import VanillaLatte from '/image/IceCafe/IceVanilla.webp'
+import IceMacchiato from '/image/IceCafe/IceMacchiato.webp'
+import Cappuccino from '/image/HotCoffee/Cappuccino.webp'
+import FlatWhite from '/image/HotCoffee/FlatWhite.webp'
+import Irish from '/image/HotCoffee/Irish.webp'
+import Mocha from '/image/HotCoffee/Mocha.webp'
+import Espresso from '/image/HotCoffee/Espresso.webp'
+import IceLatte from '/image/IceCafe/IceLatte.webp'
+import MatchaLatte from '/image/IceCafe/MatchaLatte.webp'
 
 const SlideShow = () => {
 
