@@ -36,7 +36,7 @@ const About = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    src={aboutImage} alt="Error load" className={'md:w-[45rem] md:h-[15rem] sm:w-[30rem] w-[20rem] h-[10rem] rounded-xl object-cover'} />
+                    src={aboutImage} alt="Error load" className={'md:w-[45rem] md:h-[20rem] sm:w-[30rem] w-[20rem] h-[13rem] rounded-xl object-cover'} />
             </div>
         </div>
         
