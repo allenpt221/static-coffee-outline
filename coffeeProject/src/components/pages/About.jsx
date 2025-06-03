@@ -19,23 +19,38 @@ const About = () => {
     const [isInspirationOpen, setIsInspirationOpen] = useState(false);
 
   return (
-    <div className='m-4 h-screen'>
+    <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className='m-4 h-screen'>
         <div className='flex flex-col md:flex-row items-center xl:max-w-[1100px] m-auto lg:gap-28 gap-10'>
             <div className='box-border sm:w-[450px] md:w-[400px] w-[270px]'>
                 <h1 className='font-bold md:text-[1.5rem] text-[1.2rem] '>Every cup we brew is made to match your<span className='text-[#945b06]'> mood</span>, your moment, your vibe.</h1>
                 <p className='text-xs mt-4'>{aboutText}</p>
             </div>
             <div>
-                <img src={aboutImage} alt="Error load" className={'md:w-[35rem] md:h-[20rem] sm:w-[30rem] w-[20rem] h-[15rem] rounded-xl'} />
+                <motion.img
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    src={aboutImage} alt="Error load" className={'md:w-[45rem] md:h-[15rem] sm:w-[30rem] w-[20rem] h-[10rem] rounded-xl object-cover'} />
             </div>
         </div>
         
         <div className='md:p-5 p-0 mt-5'>
             <h1 className='font-medium text-[1.5rem]'>What We Believe In</h1>
-            <div className='box-border w-[50rem] m-1 text-sm'>
+            <div className='box-border lg:w-[50rem] w-full  m-1 text-sm'>
                 <p>{BelieveIn}</p>
             </div>
-            <div className='flex flex-wrap max-w-[1200px] m-auto gap-3 mt-10 justify-center'>
+            <motion.div 
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className='flex flex-wrap max-w-[1200px] m-auto gap-3 mt-10 justify-center'>
                 {CoffeeItem.map((item) => (
                     <div className='shadow-lg bg-gradient-to-br from-[#7e470044] to-[#7777772d] sm:p-5 py-5 px-2 flex flex-col items-center text-center rounded-md'>
                         <span className='flex flex-row gap-2 items-center'>< item.Icons size={20}/> <h1 className='font-medium sm:text-[1rem] text-[0.9rem] bg-gradient-to-r from-[#7c420c] to-black/65 bg-clip-text text-transparent'>{item.titleHead}</h1></span>
@@ -44,7 +59,7 @@ const About = () => {
                         </div>
                     </div>
                 ))}    
-            </div>
+            </motion.div>
         </div>
 
         {/* our story */}
@@ -113,10 +128,8 @@ const About = () => {
             </AnimatePresence>
             
             
-            
-            
         </div>
-    </div>
+    </motion.div>
   )
 }
 
