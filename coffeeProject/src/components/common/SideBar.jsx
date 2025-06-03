@@ -17,7 +17,7 @@ const SmallScreen = () => {
         { icon: IoHome, href: '/' },
         { icon: FaBoxOpen  , href: '/Products'}, 
         { icon: FaCircleExclamation, href: '/about'},
-        { icon: MdLocalPhone, href: '/contact'},
+        // { icon: MdLocalPhone, href: '/contact'},
     ];
 
     return (
