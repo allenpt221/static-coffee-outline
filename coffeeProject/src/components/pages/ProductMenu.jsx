@@ -33,7 +33,6 @@ const ProductMenu = () => {
                 <div className='lg:max-w-[90rem] md:max-w-[45rem] sm:max-w-[85rem] max-w-[20rem] m-auto'>
                     <h1 className='font-semibold text-[1.2rem] mt-5 mx-5 '>Morning Roast</h1>
                     <div className='border-b border-[#4b4b4b69] my-2 mx-5' />
-                    <div className=' m-auto'>
                         <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4 mt-5 text-center'>
                             {hotcoffees.map((item) => (
                                 <motion.div 
@@ -57,12 +56,10 @@ const ProductMenu = () => {
                                 </motion.div>
                             ))}
                         </div>
-                    </div>
                     {/* ice coffee section */}
                     <div className='mt-10'>
                         <h1 className='text-[1.2rem] font-semibold mt-5 mx-5'>Chilled Coffee</h1>
                         <div className='border-b border-[#4b4b4b69] my-2 mx-5' />
-                        <div className='max-w-[80rem] m-auto'>
                         <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4 mt-5 text-center'>
                             {Icecoffees.map((items) => (
                                 <motion.div 
@@ -87,12 +84,10 @@ const ProductMenu = () => {
                             ))}
                         </div>
                     </div>
-                    </div>
                     {/* pasty section */}
                     <div className='mt-10'>
                         <h1 className='text-[1.2rem] font-semibold mt-5 mx-5'>Sweet Layers</h1>
                         <div className='border-b border-[#4b4b4b69] my-2 mx-5' />
-                        <div className='max-w-[80rem] m-auto'>
                         <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-4 mt-5 text-center'>
                             {pastryMenu.map((Pastry) => (
                                 <motion.div 
@@ -116,7 +111,6 @@ const ProductMenu = () => {
                                 </motion.div>
                             ))}
                         </div>
-                    </div>
                     </div>
                 </div>
                 
