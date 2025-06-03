@@ -98,10 +98,10 @@ const SlideShow = () => {
             </div>
             <div className='grid md:grid-cols-2 xl:grid-cols-3 grid-rows-1 gap-4'>
             {getVisibleImages().map((scrItem, index) => ( 
-              <div className="flex flex-col gap-2 bg-[#a7a7a72a] shadow-xl rounded-md py-5 lg:h-[21rem] md:h-[23rem] " key={index}>
+              <div className="flex flex-col gap-2 bg-[#a7a7a72a] shadow-md rounded-lg py-5 lg:h-[23rem] md:h-[25rem] " key={index}>
                 <h1 className='font-medium text-center'>{scrItem.coffee}</h1>
                 <div className='sm:px-9 px-5 flex flex-col gap-5'>
-                <img src={scrItem.img} alt={scrItem.alternative} className='shadow-lg border border-[#3b3b3b59]  xl:h-[10.2rem] xl:w-[20rem] h-[10rem] w-[25rem] m-auto rounded-lg' />
+                <img src={scrItem.img} alt={scrItem.alternative} className='shadow-lg border border-[#3b3b3b59] h-[12rem] w-full m-auto rounded-lg object-cover' />
                 <p className='text-xs'><span className='font-medium'>description: </span>{scrItem.descp}</p>
                 <p className='text-xs'><span className='font-medium'>Why it's popular: </span>{scrItem.whyPopular}</p>
                 </div>

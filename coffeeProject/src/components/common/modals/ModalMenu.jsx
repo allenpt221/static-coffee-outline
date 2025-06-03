@@ -33,7 +33,7 @@ const ModalMenu = ({ isOpen, isClose, image, title, descrp, healthBene }) => {
                     <img
                         src={image}
                         alt="Error"
-                        className="sm:w-[100rem] sm:h-[20rem] w-[20rem] h-full m-auto rounded-lg"
+                        className="sm:w-[100rem] sm:h-[20rem] w-[20rem] object-cover h-full m-auto rounded-lg"
                     />
                     <motion.button
                         onClick={isClose}

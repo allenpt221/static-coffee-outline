@@ -38,7 +38,7 @@ const Home = () => {
           className='rounded-md p-2 text-center  bg-[#a7a7a72a] shadow-xl flex flex-col justify-between' key={index}>
             <div className='flex flex-col gap-4 items-center justify-center'>
             <h1 className='font-semibold text-[1rem] sm:text-[0.75rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.1rem]'>{item.title}</h1>
-            <img src={item.image} alt={item.altertext} className=' h-[10rem] sm:h-[10rem] lg:h-[11.5rem] w-[20rem] lg:w-[17rem] xl:w-[20rem] rounded-lg shadow-lg border border-[#3b3b3b59] text-left font-serif'/>
+            <img src={item.image} alt={item.altertext} className='h-[10rem] sm:h-[10rem] lg:h-[11.5rem] w-[20rem] lg:w-[17rem] xl:w-[20rem] rounded-lg shadow-lg border border-[#3b3b3b59] text-left font-serif'/>
             <p className='text-xs px-2'>{item.text}</p>
             </div>
             <motion.span className='mr-5 mt-2 text-right'
