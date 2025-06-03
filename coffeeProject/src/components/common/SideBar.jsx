@@ -74,7 +74,7 @@ const SideBar = () => {
         { sideItem: 'Home',  icon: IoHome, href: '/' },
         { sideItem: 'Café ', icon: FaBoxOpen  , href: '/Products'}, 
         { sideItem: 'About',  icon: FaCircleExclamation, href: '/about'},
-        { sideItem: 'Contact', icon: MdLocalPhone, href: '/contact'},
+        // { sideItem: 'Contact', icon: MdLocalPhone, href: '/contact'},
     ];
   return (
     <div>
